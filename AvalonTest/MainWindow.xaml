@@ -1,0 +1,32 @@
+﻿<Window x:Class="AvalonTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AvalonTest"
+        mc:Ignorable="d"
+        Title="Dirkster Avalon MouseLeave Tester" Height="300" Width="300">
+    <Grid>
+        <DockingManager>
+            <LayoutRoot>
+                <LayoutPanel>
+                    <LayoutAnchorablePaneGroup DockHeight="1*">
+                        <LayoutAnchorablePane DockWidth="1*">
+                            <LayoutAnchorable 
+                                x:Name="TestAnchorable"
+                                Title="Test" 
+                                ContentId="document1">
+                                <Border x:Name="testArea" MouseEnter="UIElement_OnMouseEnter" MouseLeave="UIElement_OnMouseLeave" Background="Blue"/>
+                            </LayoutAnchorable>
+                            <LayoutAnchorable 
+                                Title="Empty" 
+                                ContentId="document2">
+                                
+                            </LayoutAnchorable>
+                        </LayoutAnchorablePane>
+                    </LayoutAnchorablePaneGroup>
+                </LayoutPanel>
+            </LayoutRoot>
+        </DockingManager>
+    </Grid>
+</Window>
